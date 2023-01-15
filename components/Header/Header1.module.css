@@ -1,0 +1,26 @@
+.NavButton {
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+
+.Company {
+  display: flex;
+  margin-right: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.CompanyText {
+  white-space: nowrap;
+}
+
+.Logo {
+  margin-right: 1rem;
+}
+
+.ActionButton {
+  white-space: nowrap;
+}
+
+
+

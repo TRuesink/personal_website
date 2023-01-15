@@ -1,0 +1,24 @@
+.SiteMap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.SiteMapItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20vh;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
+.SiteMapDivider {
+  height: 20vh;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+}
+
+.SiteMapText {
+  margin: 0.25rem 0 0.25rem 0;
+}
