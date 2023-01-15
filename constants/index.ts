@@ -9,15 +9,18 @@ export const COMPANY_NAME = {
 };
 
 export const NAVIGATION_ITEMS = [
-  'Macros',
-  'Transformations',
-  'Coaching',
-  'About Me',
+  { label: 'Macros', href: '/macros' },
+  { label: 'Transformations', href: '/transformations' },
+  { label: 'Coaching', href: '/coaching' },
+  { label: 'About Me', href: '/about' },
 ];
 
-export const PRIMARY_ACTION = 'Free Consultation';
+export const PRIMARY_ACTION = {
+  label: 'Free Consultation',
+  href: '/consultation',
+};
 
-export const SECONDARY_ACTION = 'Contact';
+export const SECONDARY_ACTION = { label: 'Contact', href: '/contact' };
 
 export const CONTACT_ITEMS = {
   HEADING: 'Contact',
@@ -33,6 +36,6 @@ export const SITE_MAP = {
   ITEMS: [
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
-    { label: 'FAQ', href: 'faq' },
+    { label: 'FAQ', href: '/faq' },
   ],
 };

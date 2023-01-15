@@ -4,13 +4,13 @@ import {
   Container,
   Divider,
   IconButton,
-  Link,
   Stack,
   Typography,
 } from '@mui/material';
 import React from 'react';
 import { COMPANY_NAME, CONTACT_ITEMS, SITE_MAP } from '../../constants';
 import { theme } from '../../constants/theme';
+import CustomLink from '../Links/CustomLink';
 
 import styles from './Footer1.module.css';
 
@@ -65,11 +65,11 @@ const Footer1 = () => {
           >
             <Typography variant="h6">{SITE_MAP.HEADING}</Typography>
             {SITE_MAP.ITEMS.map((item) => (
-              <Link href={item.href}>
+              <CustomLink href={item.href}>
                 <Typography className={styles.SiteMapText} variant="body2">
                   {item.label}
                 </Typography>
-              </Link>
+              </CustomLink>
             ))}
           </Box>
           <Box

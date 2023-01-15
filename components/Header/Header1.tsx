@@ -20,6 +20,7 @@ import {
 } from '../../constants';
 
 import Dumbbell from '../../public/dumbbell.svg';
+import CustomMenuItem from '../Links/CustomMenuItem';
 
 import styles from './Header1.module.css';
 
@@ -69,8 +70,13 @@ const Header1 = () => {
           </Box>
           <Box sx={{ display: { xs: 'none', lg: 'flex' } }}>
             {NAVIGATION_ITEMS.map((item) => (
-              <Button className={styles.NavButton} color="primary" key={item}>
-                {item}
+              <Button
+                className={styles.NavButton}
+                color="primary"
+                key={item.label}
+                href={item.href}
+              >
+                {item.label}
               </Button>
             ))}
           </Box>
@@ -98,9 +104,13 @@ const Header1 = () => {
           >
             {NAVIGATION_ITEMS.concat([SECONDARY_ACTION, PRIMARY_ACTION]).map(
               (item) => (
-                <MenuItem key={item} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{item}</Typography>
-                </MenuItem>
+                <CustomMenuItem
+                  key={item.label}
+                  onClick={handleCloseNavMenu}
+                  href={item.href}
+                >
+                  <Typography textAlign="center">{item.label}</Typography>
+                </CustomMenuItem>
               )
             )}
           </Menu>
@@ -110,16 +120,17 @@ const Header1 = () => {
               color="primary"
               sx={{ marginRight: '0.5rem' }}
               className={styles.ActionButton}
+              href={SECONDARY_ACTION.href}
             >
-              {SECONDARY_ACTION}
+              {SECONDARY_ACTION.label}
             </Button>
             <Button
               variant="contained"
               color="primary"
               className={styles.ActionButton}
-              href="/test"
+              href={PRIMARY_ACTION.href}
             >
-              {PRIMARY_ACTION}
+              {PRIMARY_ACTION.label}
             </Button>
           </Box>
         </Toolbar>
