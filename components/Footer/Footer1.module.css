@@ -8,15 +8,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 20vh;
   margin-top: 2.5vh;
-  margin-bottom: 2.5vh;
+  margin-bottom: 5vh;
 }
 
 .SiteMapDivider {
-  height: 20vh;
   margin-top: 2.5vh;
-  margin-bottom: 2.5vh;
+  margin-bottom: 5vh;
 }
 
 .SiteMapText {
