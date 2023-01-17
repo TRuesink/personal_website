@@ -5,3 +5,7 @@ body {
 .MuiAppBar-colorDefault {
   background-color: white;
 }
+
+.CustomImage {
+  object-fit: contain;
+}
