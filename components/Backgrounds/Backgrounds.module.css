@@ -1,0 +1,9 @@
+.Background {
+  position: relative;
+  overflow: hidden;
+}
+
+.Content {
+  position: relative;
+  z-index: 10;
+}
