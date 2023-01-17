@@ -39,3 +39,8 @@ export const SITE_MAP = {
     { label: 'FAQ', href: '/faq' },
   ],
 };
+
+export const BRAND = {
+  tagline: 'Eat More Weigh Less',
+  subTagline: 'Rediscover your metabolism by eating more and dieting less',
+};
