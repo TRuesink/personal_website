@@ -8,9 +8,8 @@ import {
   Button,
   IconButton,
   Menu,
-  MenuItem,
-  SvgIcon,
 } from '@mui/material';
+import Image from 'next/image';
 import React, { useState } from 'react';
 import {
   COMPANY_NAME,
@@ -19,7 +18,7 @@ import {
   SECONDARY_ACTION,
 } from '../../constants';
 
-import Dumbbell from '../../public/dumbbell.svg';
+import Logo from '../../public/tt.png';
 import CustomMenuItem from '../Links/CustomMenuItem';
 
 import styles from './Header1.module.css';
@@ -40,13 +39,13 @@ const Header1 = () => {
       <Container>
         <Toolbar disableGutters>
           <Box className={styles.Company}>
-            <SvgIcon
+            <Image
               className={styles.Logo}
-              component={Dumbbell}
-              inheritViewBox
-              fontSize="large"
-              color="primary"
-            ></SvgIcon>
+              src={Logo}
+              height={50}
+              width={50}
+              alt="logo"
+            />
             <Typography
               color="primary"
               className={styles.CompanyText + ' ' + COMPANY_NAME.FONT.className}
@@ -116,17 +115,8 @@ const Header1 = () => {
           </Menu>
           <Box sx={{ display: { xs: 'none', lg: 'flex' } }}>
             <Button
-              variant="outlined"
-              color="primary"
-              sx={{ marginRight: '0.5rem' }}
-              className={styles.ActionButton}
-              href={SECONDARY_ACTION.href}
-            >
-              {SECONDARY_ACTION.label}
-            </Button>
-            <Button
               variant="contained"
-              color="primary"
+              color="secondary"
               className={styles.ActionButton}
               href={PRIMARY_ACTION.href}
             >
