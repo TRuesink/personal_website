@@ -65,7 +65,7 @@ const Footer1 = () => {
           >
             <Typography variant="h6">{SITE_MAP.HEADING}</Typography>
             {SITE_MAP.ITEMS.map((item) => (
-              <CustomLink href={item.href}>
+              <CustomLink href={item.href} key={item.href}>
                 <Typography className={styles.SiteMapText} variant="body2">
                   {item.label}
                 </Typography>
@@ -78,7 +78,11 @@ const Footer1 = () => {
           >
             <Typography variant="h6">{CONTACT_ITEMS.HEADING}</Typography>
             {CONTACT_ITEMS.ITEMS.map((item) => (
-              <Typography className={styles.SiteMapText} variant="body2">
+              <Typography
+                className={styles.SiteMapText}
+                variant="body2"
+                key={item.label}
+              >
                 {item.label}
               </Typography>
             ))}

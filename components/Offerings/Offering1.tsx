@@ -43,7 +43,7 @@ const Offering1 = ({
           </Grid>
         )}
         {features.map((feature) => (
-          <Grid item xs={11} sm={9} md={4}>
+          <Grid item xs={11} sm={9} md={4} key={feature.title}>
             <Box sx={{ position: 'relative', padding: '1rem' }}>
               <Box
                 className={styles.BackgroundBox}
