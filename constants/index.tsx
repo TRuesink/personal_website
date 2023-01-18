@@ -1,3 +1,4 @@
+import { Assignment, People, Scale } from '@mui/icons-material';
 import { Abril_Fatface } from '@next/font/google';
 const companyFont = Abril_Fatface({ weight: '400', subsets: ['latin'] });
 
@@ -44,3 +45,24 @@ export const BRAND = {
   tagline: 'Eat More Weigh Less',
   subTagline: 'Rediscover your metabolism by eating more and dieting less',
 };
+
+export const OFFERINGS = [
+  {
+    icon: <Scale sx={{ fontSize: '5rem' }} color="inherit" />,
+    title: 'Personalized Macro Calculation',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
+  },
+  {
+    icon: <People sx={{ fontSize: '5rem' }} color="inherit" />,
+    title: '1:1 Coaching',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
+  },
+  {
+    icon: <Assignment sx={{ fontSize: '5rem' }} color="inherit" />,
+    title: 'Tailored Workout Plan',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
+  },
+];
