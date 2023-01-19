@@ -1,17 +1,15 @@
 .BackgroundBox {
   position: absolute;
-  height: 60%;
-  width: 50%;
   opacity: 0.1;
   transition: 0.2s;
-  margin: -1rem;
+  border-radius: 20px;
 }
 
-.BackgroundBox:hover {
+.BackgroundBoxClickable:hover {
   transition: 0.2s;
   height: 100%;
   width: 100%;
-};
+}
 
 .Feature {
   margin-top: 1rem;

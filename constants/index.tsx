@@ -46,22 +46,25 @@ export const BRAND = {
   subTagline: 'Rediscover your metabolism by eating more and dieting less',
 };
 
-export const OFFERINGS = [
+export const FEATURES = [
   {
-    icon: <Scale sx={{ fontSize: '5rem' }} color="inherit" />,
+    icon: <Scale />,
     title: 'Personalized Macro Calculation',
+    href: '/macros',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
   },
   {
-    icon: <People sx={{ fontSize: '5rem' }} color="inherit" />,
+    icon: <People />,
     title: '1:1 Coaching',
+    href: '/coaching',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
   },
   {
-    icon: <Assignment sx={{ fontSize: '5rem' }} color="inherit" />,
+    icon: <Assignment />,
     title: 'Tailored Workout Plan',
+    href: '/workout-plan',
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
   },

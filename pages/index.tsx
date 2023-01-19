@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react';
 import Banner1 from '../components/Banners/Banner1';
 import Layout1 from '../components/Layout/Layout1';
-import Offering1 from '../components/Offerings/Offering1';
-import { BRAND, OFFERINGS } from '../constants';
+import Features1 from '../components/Features/Features1';
+import { BRAND, FEATURES } from '../constants';
 import type { NextPageWithLayout } from './_app';
 
 const taglineWords = BRAND.tagline.split(' ');
@@ -19,12 +19,16 @@ const Page: NextPageWithLayout = () => {
         imgSrc="/55185_1.png"
         subTagline={BRAND.subTagline}
       />
-      <Offering1
+      <Features1
         height="70vh"
         backgroundColor="white"
         textColor="test.primary"
-        features={OFFERINGS}
+        features={FEATURES}
         title="Features"
+        iconSize={3}
+        iconColor="primary.text"
+        textAlign="center"
+        clickable
       />
     </div>
   );
