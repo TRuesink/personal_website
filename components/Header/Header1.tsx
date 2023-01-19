@@ -35,7 +35,7 @@ const Header1 = () => {
   };
 
   return (
-    <AppBar color="default" position="sticky">
+    <AppBar sx={{ backgroundColor: 'white' }} position="sticky">
       <Container>
         <Toolbar disableGutters>
           <Box className={styles.Company}>
