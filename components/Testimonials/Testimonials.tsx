@@ -5,9 +5,15 @@ import TestimonialCard from './TestimonialCard';
 
 type TestimonialsProps = {
   title?: string;
+  testimonials: {
+    name: string;
+    quote: string;
+    date: string;
+    rating: number;
+  }[];
 };
 
-const Testimonials = ({ title }: TestimonialsProps) => {
+const Testimonials = ({ title, testimonials }: TestimonialsProps) => {
   return (
     <Box
       minHeight="inherit"
@@ -35,7 +41,7 @@ const Testimonials = ({ title }: TestimonialsProps) => {
         paddingTop="3rem"
         paddingBottom="3rem"
       >
-        {TESTIMONIALS.map((testimonial) => (
+        {testimonials.map((testimonial) => (
           <Grid item xs={3}>
             <TestimonialCard testimonial={testimonial} />
           </Grid>

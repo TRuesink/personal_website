@@ -3,7 +3,7 @@ import { Circle } from '@mui/icons-material';
 import Banner1 from '../components/Banners/Banner1';
 import Layout1 from '../components/Layout/Layout1';
 import Features1 from '../components/Features/Features1';
-import { BRAND, FEATURES, PRIMARY_ACTION } from '../constants';
+import { BRAND, FEATURES, PRIMARY_ACTION, TESTIMONIALS } from '../constants';
 import SolidBackground from '../components/Backgrounds/SolidBackground';
 import PictureBackground from '../components/Backgrounds/PictureBackground';
 import CallToAction from '../components/CallToAction/CallToAction';
@@ -74,7 +74,7 @@ const Page: NextPageWithLayout = () => {
         backgroundColor="white"
         textColor="text.primary"
       >
-        <Testimonials title="Testimonials" />
+        <Testimonials title="Testimonials" testimonials={TESTIMONIALS} />
       </SolidBackground>
       <PictureBackground
         height="50vh"
