@@ -1,6 +1,5 @@
 import { Box, Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
-import { TESTIMONIALS } from '../../constants';
 import TestimonialCard from './TestimonialCard';
 
 type TestimonialsProps = {
@@ -42,7 +41,7 @@ const Testimonials = ({ title, testimonials }: TestimonialsProps) => {
         paddingBottom="3rem"
       >
         {testimonials.map((testimonial) => (
-          <Grid item xs={3}>
+          <Grid item xs={3} key={testimonial.name}>
             <TestimonialCard testimonial={testimonial} />
           </Grid>
         ))}

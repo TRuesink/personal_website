@@ -30,7 +30,9 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         <Typography variant="h6">{testimonial.name}</Typography>
         <Typography variant="body2">{testimonial.date}</Typography>
         <Box>{renderRatingIcons()}</Box>
-        <Typography variant="caption">"{testimonial.quote}"</Typography>
+        <Typography variant="caption">
+          &quot;{testimonial.quote}&quot;
+        </Typography>
       </CardContent>
     </Card>
   );
