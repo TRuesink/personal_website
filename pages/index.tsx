@@ -8,6 +8,7 @@ import SolidBackground from '../components/Backgrounds/SolidBackground';
 import PictureBackground from '../components/Backgrounds/PictureBackground';
 import CallToAction from '../components/CallToAction/CallToAction';
 import type { NextPageWithLayout } from './_app';
+import Testimonials from '../components/Testimonials/Testimonials';
 
 const taglineWords = BRAND.tagline.split(' ');
 
@@ -68,17 +69,15 @@ const Page: NextPageWithLayout = () => {
           clickable
         />
       </SolidBackground>
-
       <SolidBackground
         height="70vh"
         backgroundColor="white"
         textColor="text.primary"
       >
-        <div>test</div>
+        <Testimonials title="Testimonials" />
       </SolidBackground>
       <PictureBackground
         height="50vh"
-        backgroundColor="white"
         textColor="white"
         overlayColor="primary.main"
         overlayOpacity={0.8}

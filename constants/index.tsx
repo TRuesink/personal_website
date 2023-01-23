@@ -71,3 +71,25 @@ export const FEATURES = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
   },
 ];
+
+export const TESTIMONIALS = [
+  {
+    name: 'Ashley',
+    quote:
+      'I have felt really good! I don’t think I would have noticed the progress if we were not doing the side by sides or measurements. But the overall energy I have is what I notice the most.',
+    date: '11/14/22',
+    rating: 5,
+  },
+  {
+    name: 'Eric',
+    quote: 'I think I have found a passion with this stuff!',
+    date: '11/14/22',
+    rating: 3,
+  },
+  {
+    name: 'Kathy',
+    quote: 'I had given up all hope…that’s when I reached out to coach Anthony',
+    date: '6/26/22',
+    rating: 4,
+  },
+];
