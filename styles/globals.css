@@ -9,3 +9,7 @@ body {
 .CustomImage {
   object-fit: contain;
 }
+
+.BackgroundImage {
+  object-fit: cover;
+}

@@ -18,6 +18,8 @@ export const NAVIGATION_ITEMS = [
 
 export const PRIMARY_ACTION = {
   label: 'Free Consultation',
+  content:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie, risus eu tristique tempor, arcu dolor suscipit turpis, eget venenatisligula lorem vel tellus. Curabitur efficitur massa a condimentum interdum. Maecenas convallis imperdiet sapien sit amet pellentesque.',
   href: '/consultation',
 };
 
