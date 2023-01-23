@@ -4,13 +4,10 @@ import React from 'react';
 
 import styles from './Backgrounds.module.css';
 
-type ColorType = 'primary.main' | 'primary.light' | 'primary.dark' | 'white';
-
 import imaage from '../../public/workout.jpg';
 
 export type PictureBackgroundProps = {
   height: string;
-  backgroundColor: ColorType;
   textColor: string;
   children: React.ReactElement;
   overlayColor: string;
@@ -19,7 +16,6 @@ export type PictureBackgroundProps = {
 
 const PictureBackground = ({
   height,
-  backgroundColor,
   textColor,
   children,
   overlayColor,
@@ -33,13 +29,6 @@ const PictureBackground = ({
         color: textColor,
       }}
     >
-      <Box
-        sx={{
-          minHeight: height,
-          backgroundColor: backgroundColor,
-          opacity: 0.4,
-        }}
-      />
       <Box
         sx={{
           position: 'absolute',
