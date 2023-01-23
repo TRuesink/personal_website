@@ -36,12 +36,12 @@ const Testimonials = ({ title, testimonials }: TestimonialsProps) => {
         direction="row"
         justifyContent="center"
         alignItems="flex-start"
-        columnGap={4}
+        gap={4}
         paddingTop="3rem"
         paddingBottom="3rem"
       >
         {testimonials.map((testimonial) => (
-          <Grid item xs={3} key={testimonial.name}>
+          <Grid item xs={10} md={3} key={testimonial.name}>
             <TestimonialCard testimonial={testimonial} />
           </Grid>
         ))}
