@@ -3,11 +3,17 @@ import React from 'react';
 
 import styles from './Backgrounds.module.css';
 
-type ColorType = 'primary.main' | 'primary.light' | 'primary.dark' | 'white';
+type ColorType =
+  | 'primary.main'
+  | 'primary.light'
+  | 'primary.dark'
+  | 'white'
+  | 'grey.100';
 
 export type SolidBackgroundProps = {
   height: string;
   backgroundColor: ColorType;
+  backgroundOpacity?: number;
   textColor: string;
   children: React.ReactElement;
   shapes?: {
@@ -32,6 +38,7 @@ const SolidBackground = ({
   textColor,
   children,
   shapes,
+  backgroundOpacity,
 }: SolidBackgroundProps) => {
   return (
     <Box
@@ -40,6 +47,7 @@ const SolidBackground = ({
         minHeight: height,
         backgroundColor: backgroundColor,
         color: textColor,
+        opacity: backgroundOpacity || 1,
       }}
     >
       {shapes?.map((shape) => (

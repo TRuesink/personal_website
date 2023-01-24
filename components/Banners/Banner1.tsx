@@ -56,7 +56,7 @@ const Banner1 = ({ tagline1, tagline2, subTagline, imgSrc }: Banner1Props) => {
             height: { xs: '30vh', sm: '50vh' },
           }}
         >
-          <Image className="CustomImage" src={imgSrc} fill alt="test" />
+          <Image className="CustomImage" src={imgSrc} fill alt="banner-image" />
         </Box>
       </Grid>
       <Grid item xs={9} sx={{ display: { xs: 'block', sm: 'none' } }}>
