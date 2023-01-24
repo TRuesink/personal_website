@@ -93,3 +93,9 @@ export const TESTIMONIALS = [
     rating: 4,
   },
 ];
+
+export const ABOUT_ME = {
+  heading: 'Meet Your Coach',
+  content:
+    'Hi! I’m Anthony. I am a certified macro nutrition and fitness coach. I specialize in metabolism repair, fat loss, and body recomposition. Learn more about me on the “Meet the coach” page! ',
+};

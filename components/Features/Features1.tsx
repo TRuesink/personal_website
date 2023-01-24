@@ -1,13 +1,17 @@
 import { Box, Divider, Grid, SvgIcon, Typography } from '@mui/material';
 import Link from 'next/link';
+import { useState } from 'react';
+import CustomLink from '../Links/CustomLink';
+
+type Feature = {
+  icon: React.ReactElement;
+  title: string;
+  href: string;
+  content: string;
+};
 
 type Features1Props = {
-  features: {
-    icon: React.ReactElement;
-    title: string;
-    href: string;
-    content: string;
-  }[];
+  features: Feature[];
   title: string | undefined;
   iconSize: number;
   iconColor: string;
@@ -25,6 +29,8 @@ const Features1 = ({
   textAlign,
   clickable,
 }: Features1Props) => {
+  const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
+
   const bgBoxStyle = {
     textAlign: textAlign,
     top: 0,
@@ -32,6 +38,38 @@ const Features1 = ({
     right: textAlign === 'right' ? 0 : 'unset',
     transform: textAlign === 'center' ? 'translate(-50%, 0)' : 'unset',
   };
+
+  const handleExpand = (feature: string) => {
+    setHoveredFeature(feature);
+  };
+
+  const handleCollapse = () => {
+    setHoveredFeature(null);
+  };
+
+  const renderFeature = (feature: Feature) => {
+    return (
+      <Box
+        sx={{ position: 'relative', zIndex: 10 }}
+        onMouseLeave={() => handleCollapse()}
+      >
+        <SvgIcon
+          sx={{
+            fontSize: `${iconSize}rem`,
+            color: 'inherit',
+          }}
+          onMouseEnter={() => handleExpand(feature.title)}
+        >
+          {feature.icon}
+        </SvgIcon>
+        <Typography variant="h6" fontWeight="bold">
+          {feature.title}
+        </Typography>
+        <Typography>{feature.content}</Typography>
+      </Box>
+    );
+  };
+
   return (
     <Box
       sx={{
@@ -71,41 +109,31 @@ const Features1 = ({
                 textAlign: textAlign,
               }}
             >
-              {clickable ? (
-                <Link href={feature.href} passHref>
-                  <Box
-                    className={`${styles.BackgroundBox} ${styles.BackgroundBoxClickable}`}
-                    sx={{
-                      backgroundColor: 'primary.light',
-                      height: `${iconSize + 1}rem`,
-                      width: `${iconSize + 1}rem`,
-                      ...bgBoxStyle,
-                    }}
-                  />
-                </Link>
-              ) : (
-                <Box
-                  className={styles.BackgroundBox}
-                  sx={{
-                    backgroundColor: 'primary.light',
-                    height: `${iconSize + 1}rem`,
-                    width: `${iconSize + 1}rem`,
-                    ...bgBoxStyle,
-                  }}
-                />
-              )}
-              <SvgIcon
+              <Box
+                className={`${styles.BackgroundBox} ${
+                  hoveredFeature === feature.title
+                    ? styles.BackgroundBoxHover
+                    : ''
+                }`}
                 sx={{
-                  fontSize: `${iconSize}rem`,
-                  color: iconColor,
+                  backgroundColor: 'primary.light',
+                  opacity: 1,
+                  height: `${iconSize + 1}rem`,
+                  width: `${iconSize + 1}rem`,
+                  ...bgBoxStyle,
                 }}
-              >
-                {feature.icon}
-              </SvgIcon>
-              <Typography variant="h6" fontWeight="bold">
-                {feature.title}
-              </Typography>
-              <Typography>{feature.content}</Typography>
+              />
+              {clickable ? (
+                <CustomLink
+                  href={feature.href}
+                  textDecoration="none"
+                  color={iconColor}
+                >
+                  {renderFeature(feature)}
+                </CustomLink>
+              ) : (
+                renderFeature(feature)
+              )}
             </Box>
           </Grid>
         ))}

@@ -13,3 +13,7 @@ body {
 .BackgroundImage {
   object-fit: cover;
 }
+
+.FeatureImage {
+  object-fit: cover;
+}

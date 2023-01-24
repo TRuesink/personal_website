@@ -3,12 +3,19 @@ import { Circle } from '@mui/icons-material';
 import Banner1 from '../components/Banners/Banner1';
 import Layout1 from '../components/Layout/Layout1';
 import Features1 from '../components/Features/Features1';
-import { BRAND, FEATURES, PRIMARY_ACTION, TESTIMONIALS } from '../constants';
+import {
+  BRAND,
+  FEATURES,
+  PRIMARY_ACTION,
+  TESTIMONIALS,
+  ABOUT_ME,
+} from '../constants';
 import SolidBackground from '../components/Backgrounds/SolidBackground';
 import PictureBackground from '../components/Backgrounds/PictureBackground';
 import CallToAction from '../components/CallToAction/CallToAction';
 import type { NextPageWithLayout } from './_app';
 import Testimonials from '../components/Testimonials/Testimonials';
+import HighlightedFeature from '../components/Features/HighlightedFeature';
 
 const taglineWords = BRAND.tagline.split(' ');
 
@@ -29,42 +36,14 @@ const Page: NextPageWithLayout = () => {
       </SolidBackground>
       <SolidBackground
         height="70vh"
-        backgroundColor="white"
-        textColor="test.primary"
-        shapes={[
-          {
-            icon: <Circle />,
-            key: 'circle-1',
-            color: 'secondary.main',
-            opacity: 0.2,
-            size: '20rem',
-            position: {
-              top: undefined,
-              left: '-10rem',
-              right: undefined,
-              bottom: '-5rem',
-            },
-          },
-          {
-            icon: <Circle />,
-            key: 'circle-1',
-            color: 'primary.main',
-            opacity: 0.3,
-            size: '25rem',
-            position: {
-              top: '-10vh',
-              left: undefined,
-              right: ' -15rem',
-              bottom: undefined,
-            },
-          },
-        ]}
+        backgroundColor="grey.100"
+        textColor="text.primary"
       >
         <Features1
           features={FEATURES}
           title="Features"
           iconSize={3}
-          iconColor="primary.text"
+          iconColor="text.primary"
           textAlign="center"
           clickable
         />
@@ -73,6 +52,17 @@ const Page: NextPageWithLayout = () => {
         height="70vh"
         backgroundColor="white"
         textColor="text.primary"
+      >
+        <HighlightedFeature
+          imgSrc="/anthony2.jpg"
+          heading={ABOUT_ME.heading}
+          content={ABOUT_ME.content}
+        />
+      </SolidBackground>
+      <SolidBackground
+        height="70vh"
+        backgroundColor="grey.100"
+        textColor="grey.primary"
       >
         <Testimonials title="Testimonials" testimonials={TESTIMONIALS} />
       </SolidBackground>
