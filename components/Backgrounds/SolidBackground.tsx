@@ -7,6 +7,7 @@ type ColorType =
   | 'primary.main'
   | 'primary.light'
   | 'primary.dark'
+  | 'secondary.light'
   | 'white'
   | 'grey.100';
 
@@ -16,20 +17,8 @@ export type SolidBackgroundProps = {
   backgroundOpacity?: number;
   textColor: string;
   children: React.ReactElement;
-  shapes?: {
-    key: string;
-    color: string;
-    opacity: number;
-    icon: React.ReactElement;
-    size: string;
-    showOn?: string;
-    position: {
-      left: string | undefined;
-      right: string | undefined;
-      top: string | undefined;
-      bottom: string | undefined | any;
-    };
-  }[];
+  shapes?: React.ReactElement[];
+  overflow?: string;
 };
 
 const SolidBackground = ({
@@ -39,6 +28,7 @@ const SolidBackground = ({
   children,
   shapes,
   backgroundOpacity,
+  overflow,
 }: SolidBackgroundProps) => {
   return (
     <Box
@@ -48,29 +38,11 @@ const SolidBackground = ({
         backgroundColor: backgroundColor,
         color: textColor,
         opacity: backgroundOpacity || 1,
+        overflowY: overflow || 'hidden',
       }}
     >
-      {shapes?.map((shape) => (
-        <SvgIcon
-          sx={{
-            color: shape.color,
-            opacity: shape.opacity,
-            position: 'absolute',
-            fontSize: shape.size,
-            left: shape.position.left,
-            right: shape.position.right,
-            top: shape.position.top,
-            bottom: shape.position.bottom,
-            display: { xs: 'none', [shape?.showOn || 'md']: 'block' },
-          }}
-          key={shape.key}
-        >
-          {shape.icon}
-        </SvgIcon>
-      ))}
-      <Container className={styles.Content} sx={{ minHeight: 'inherit' }}>
-        {children}
-      </Container>
+      {shapes?.map((shape) => shape)}
+      <Container className={styles.Content}>{children}</Container>
     </Box>
   );
 };

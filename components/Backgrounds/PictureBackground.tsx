@@ -4,9 +4,10 @@ import React from 'react';
 
 import styles from './Backgrounds.module.css';
 
-import imaage from '../../public/workout.jpg';
+import imaage from '../../public/code2.jpg';
 
 export type PictureBackgroundProps = {
+  imgSrc: string;
   height: string;
   textColor: string;
   children: React.ReactElement;
@@ -15,6 +16,7 @@ export type PictureBackgroundProps = {
 };
 
 const PictureBackground = ({
+  imgSrc,
   height,
   textColor,
   children,
@@ -36,7 +38,7 @@ const PictureBackground = ({
           minHeight: height,
         }}
       >
-        <Image className="BackgroundImage" fill src={imaage} alt="bg-image" />
+        <Image className="BackgroundImage" fill src={imgSrc} alt="bg-image" />
       </Box>
       <Box
         sx={{
