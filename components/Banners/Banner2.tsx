@@ -5,10 +5,15 @@ import { Stack } from '@mui/system';
 import Image from 'next/image';
 import React from 'react';
 import { PRIMARY_ACTION, SOCIAL_LINKS } from '../../constants';
-import { Feature } from '../Features/Features1';
 
 import styles from './Banner.module.css';
 import Link from 'next/link';
+
+type Feature = {
+  icon: JSX.Element;
+  title: string;
+  content: string;
+};
 
 type Banner2Props = {
   headline: string;

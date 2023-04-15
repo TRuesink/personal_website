@@ -60,21 +60,18 @@ export const FEATURES = [
   {
     icon: <Code />,
     title: 'Fullstack Engineering',
-    href: undefined,
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
   },
   {
     icon: <DesignServices />,
     title: 'Usability Design',
-    href: undefined,
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
   },
   {
     icon: <Groups />,
     title: 'Leadership',
-    href: undefined,
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
   },
