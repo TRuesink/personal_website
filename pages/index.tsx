@@ -1,52 +1,113 @@
 import type { ReactElement } from 'react';
-import { Circle } from '@mui/icons-material';
-import Banner1 from '../components/Banners/Banner1';
 import Layout1 from '../components/Layout/Layout1';
-import Features1 from '../components/Features/Features1';
-import {
-  BRAND,
-  FEATURES,
-  PRIMARY_ACTION,
-  TESTIMONIALS,
-  ABOUT_ME,
-} from '../constants';
+import { FEATURES, PRIMARY_ACTION, ABOUT_ME, COMPANY_NAME } from '../constants';
 import SolidBackground from '../components/Backgrounds/SolidBackground';
 import PictureBackground from '../components/Backgrounds/PictureBackground';
 import CallToAction from '../components/CallToAction/CallToAction';
 import type { NextPageWithLayout } from './_app';
-import Testimonials from '../components/Testimonials/Testimonials';
 import HighlightedFeature from '../components/Features/HighlightedFeature';
-
-const taglineWords = BRAND.tagline.split(' ');
+import Banner2 from '../components/Banners/Banner2';
+import { Box, Stack, Typography } from '@mui/material';
+import Accordion from '../components/Accordion/Accordion';
+import CustomTimeline from '../components/Timeline/Timeline';
 
 const Page: NextPageWithLayout = () => {
   return (
     <div>
       <SolidBackground
-        height="70vh"
-        backgroundColor="primary.main"
+        height="80vh"
+        backgroundColor="primary.light"
         textColor="white"
       >
-        <Banner1
-          tagline1={taglineWords.slice(0, 2).join(' ')}
-          tagline2={taglineWords.slice(2).join(' ')}
-          imgSrc="/55185_1.png"
-          subTagline={BRAND.subTagline}
+        <Banner2
+          headline={COMPANY_NAME.FULL_NAME}
+          features={FEATURES}
+          imgSrc="/tim7.png"
         />
+      </SolidBackground>
+      <SolidBackground
+        height="100vh"
+        backgroundColor="white"
+        textColor="text.primary"
+      >
+        <Stack
+          gap={2}
+          width="100%"
+          height="auto"
+          marginTop="3rem"
+          marginBottom="3rem"
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            justifyContent: { xs: 'flex-start', md: 'flex-end' },
+            alignItems: { xs: 'center', md: 'flex-start' },
+          }}
+        >
+          <Box
+            sx={{ height: '100%', width: { xs: '100%', sm: '80%', md: '50%' } }}
+          >
+            <Typography variant="h3">Experience</Typography>
+            <Accordion
+              width="100%"
+              items={[
+                { summary: 'DataChat', content: <div>DataChat</div> },
+                { summary: 'Calimetrix', content: <div>DataChat</div> },
+                { summary: 'PI', content: <div>DataChat</div> },
+              ]}
+            />
+          </Box>
+        </Stack>
+      </SolidBackground>
+      <SolidBackground
+        height="100vh"
+        backgroundColor="grey.100"
+        textColor="text.primary"
+      >
+        <Stack
+          gap={2}
+          width="100%"
+          height="auto"
+          marginTop="3rem"
+          marginBottom="3rem"
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+          }}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              height: '100%',
+              width: { xs: '100%', sm: '80%', md: '50%' },
+            }}
+          >
+            <Typography variant="h3">Education</Typography>
+            <CustomTimeline
+              items={[
+                {
+                  title: 'WMU',
+                  content: <div>DataChat</div>,
+                  imgSrc: './wmu.svg',
+                },
+                {
+                  title: 'UW-Madison',
+                  content: <div>DataChat</div>,
+                  imgSrc: './uw.svg',
+                },
+              ]}
+            />
+          </Box>
+        </Stack>
       </SolidBackground>
       <SolidBackground
         height="70vh"
         backgroundColor="grey.100"
         textColor="text.primary"
       >
-        <Features1
-          features={FEATURES}
-          title="Features"
-          iconSize={3}
-          iconColor="text.primary"
-          textAlign="center"
-          clickable
-        />
+        <div>placholder</div>
       </SolidBackground>
       <SolidBackground
         height="70vh"
@@ -54,19 +115,21 @@ const Page: NextPageWithLayout = () => {
         textColor="text.primary"
       >
         <HighlightedFeature
-          imgSrc="/anthony2.jpg"
+          imgSrc="/tim4.png"
           heading={ABOUT_ME.heading}
           content={ABOUT_ME.content}
         />
       </SolidBackground>
       <SolidBackground
         height="70vh"
-        backgroundColor="grey.100"
-        textColor="grey.primary"
+        backgroundColor="primary.main"
+        textColor="white"
       >
-        <Testimonials title="Testimonials" testimonials={TESTIMONIALS} />
+        <HighlightedFeature imgSrc="/tim1.jpg" heading="test" content="test" />
       </SolidBackground>
+
       <PictureBackground
+        imgSrc="/code2.jpg"
         height="50vh"
         textColor="white"
         overlayColor="primary.main"
