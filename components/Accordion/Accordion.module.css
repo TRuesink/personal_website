@@ -1,0 +1,12 @@
+.AccordianContentIn {
+  padding: 0.5em;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.AccordianContentOut {
+  padding: 0.5em;
+  opacity: 0;
+  transition: 0s;
+}
+  
