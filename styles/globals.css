@@ -16,4 +16,5 @@ body {
 
 .FeatureImage {
   object-fit: cover;
+  border-radius: inherit;
 }
