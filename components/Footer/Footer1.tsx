@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from '@mui/icons-material';
+import { GitHub, LinkedIn } from '@mui/icons-material';
 import {
   Box,
   Container,
@@ -52,10 +52,10 @@ const Footer1 = () => {
             </Typography>
             <Stack direction="row">
               <IconButton color="primary">
-                <Facebook />
+                <GitHub />
               </IconButton>
               <IconButton color="primary">
-                <Instagram />
+                <LinkedIn />
               </IconButton>
             </Stack>
           </Box>

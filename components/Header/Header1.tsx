@@ -18,7 +18,7 @@ import {
   SECONDARY_ACTION,
 } from '../../constants';
 
-import Logo from '../../public/tt.png';
+import Logo from '../../public/brand1.png';
 import CustomMenuItem from '../Links/CustomMenuItem';
 
 import styles from './Header1.module.css';
