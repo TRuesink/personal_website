@@ -1,21 +1,31 @@
 import type { ReactElement } from 'react';
 import Layout1 from '../components/Layout/Layout1';
-import { FEATURES, PRIMARY_ACTION, ABOUT_ME, COMPANY_NAME } from '../constants';
+import {
+  FEATURES,
+  PRIMARY_ACTION,
+  ABOUT_ME,
+  COMPANY_NAME,
+  TIMELINE_ITEMS,
+} from '../constants';
 import SolidBackground from '../components/Backgrounds/SolidBackground';
 import PictureBackground from '../components/Backgrounds/PictureBackground';
 import CallToAction from '../components/CallToAction/CallToAction';
 import type { NextPageWithLayout } from './_app';
 import HighlightedFeature from '../components/Features/HighlightedFeature';
 import Banner2 from '../components/Banners/Banner2';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Card, Stack, Typography } from '@mui/material';
 import Accordion from '../components/Accordion/Accordion';
 import CustomTimeline from '../components/Timeline/Timeline';
+import { EXPERIENCE } from '../constants/experience';
+import { BACKGROUND_DESIGNS } from '../components/Backgrounds/backgroundDesigns';
+import { FormatQuote } from '@mui/icons-material';
+import FeatureCard from '../components/Card/FeatureCard';
 
 const Page: NextPageWithLayout = () => {
   return (
     <div>
       <SolidBackground
-        height="80vh"
+        height="90vh"
         backgroundColor="primary.light"
         textColor="white"
       >
@@ -29,85 +39,191 @@ const Page: NextPageWithLayout = () => {
         height="100vh"
         backgroundColor="white"
         textColor="text.primary"
+        overflow="visible"
+        design={BACKGROUND_DESIGNS.ONE_LEFT}
       >
-        <Stack
-          gap={2}
-          width="100%"
-          height="auto"
-          marginTop="3rem"
-          marginBottom="3rem"
-          sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
-            justifyContent: { xs: 'flex-start', md: 'flex-end' },
-            alignItems: { xs: 'center', md: 'flex-start' },
-          }}
-        >
+        <>
           <Box
-            sx={{ height: '100%', width: { xs: '100%', sm: '80%', md: '50%' } }}
+            sx={{
+              position: 'absolute',
+              height: '20%',
+              top: '30%',
+              width: '100%',
+              right: '60%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              justifyContent: 'center',
+              padding: '3rem',
+              backgroundColor: 'secondary.main',
+              borderRadius: '50px 50px',
+            }}
           >
-            <Typography variant="h3">Experience</Typography>
-            <Accordion
-              width="100%"
-              items={[
-                { summary: 'DataChat', content: <div>DataChat</div> },
-                { summary: 'Calimetrix', content: <div>DataChat</div> },
-                { summary: 'PI', content: <div>DataChat</div> },
-              ]}
-            />
+            <Typography variant="h2" color="primary">
+              EXPERIENCE
+            </Typography>
+            <Box
+              sx={{
+                position: 'absolute',
+                width: '50%',
+                textAlign: 'right',
+                padding: '3rem',
+                top: '100%',
+              }}
+            >
+              <FormatQuote
+                sx={{
+                  fontSize: '5rem',
+                  position: 'absolute',
+                  top: '10px',
+                  left: '0',
+                  transform: 'scaleX(-1)',
+                  opacity: 0.2,
+                }}
+              />
+              <Typography variant="h4">
+                The most certain way to succeed is always to try just one more
+                time.
+              </Typography>
+              <Typography> - Thomas Edison</Typography>
+            </Box>
           </Box>
-        </Stack>
+          <Stack
+            gap={2}
+            width="100%"
+            height="auto"
+            marginTop="3rem"
+            marginBottom="3rem"
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              justifyContent: { xs: 'flex-start', md: 'flex-end' },
+              alignItems: { xs: 'center', md: 'flex-start' },
+            }}
+          >
+            <Box
+              sx={{
+                height: '100%',
+                width: { xs: '100%', sm: '80%', md: '50%' },
+              }}
+            >
+              <Accordion width="100%" items={EXPERIENCE} />
+            </Box>
+          </Stack>
+        </>
       </SolidBackground>
       <SolidBackground
         height="100vh"
-        backgroundColor="grey.100"
+        backgroundColor="white"
         textColor="text.primary"
+        overflow="visible"
+        design={BACKGROUND_DESIGNS.ONE_RIGHT}
       >
-        <Stack
-          gap={2}
-          width="100%"
-          height="auto"
-          marginTop="3rem"
-          marginBottom="3rem"
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-start',
-            alignItems: 'flex-start',
-          }}
-        >
+        <>
           <Box
             sx={{
+              position: 'absolute',
+              height: '20%',
+              top: '30%',
+              width: '100%',
+              left: '60%',
               display: 'flex',
-              flexDirection: 'column',
-              height: '100%',
-              width: { xs: '100%', sm: '80%', md: '50%' },
+              alignItems: 'center',
+              justifyContent: 'flex-start',
+              padding: '3rem',
+              backgroundColor: 'primary.light',
+              borderRadius: '50px',
             }}
           >
-            <Typography variant="h3">Education</Typography>
-            <CustomTimeline
-              items={[
-                {
-                  title: 'WMU',
-                  content: <div>DataChat</div>,
-                  imgSrc: './wmu.svg',
-                },
-                {
-                  title: 'UW-Madison',
-                  content: <div>DataChat</div>,
-                  imgSrc: './uw.svg',
-                },
-              ]}
-            />
+            <Typography variant="h2" color="white">
+              EDUCATION
+            </Typography>
+            <Box
+              sx={{
+                position: 'absolute',
+                width: '50%',
+                textAlign: 'left',
+                padding: '3rem',
+                top: '100%',
+              }}
+            >
+              <FormatQuote
+                sx={{
+                  fontSize: '5rem',
+                  position: 'absolute',
+                  top: '10px',
+                  left: '0',
+                  transform: 'scaleX(-1)',
+                  opacity: 0.2,
+                }}
+              />
+              <Typography variant="h4">
+                Education is what remains after one has forgotten what one has
+                learned in school.
+              </Typography>
+              <Typography> - Albert Einstein</Typography>
+            </Box>
           </Box>
-        </Stack>
+          <Stack
+            gap={2}
+            width="100%"
+            height="auto"
+            marginTop="3rem"
+            marginBottom="3rem"
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              justifyContent: { xs: 'flex-start', md: 'space-between' },
+              alignItems: { xs: 'center', md: 'flex-start' },
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+                width: { xs: '100%', sm: '80%', md: '50%' },
+              }}
+            >
+              <CustomTimeline items={TIMELINE_ITEMS} />
+            </Box>
+          </Stack>
+        </>
       </SolidBackground>
       <SolidBackground
         height="70vh"
-        backgroundColor="grey.100"
+        backgroundColor="white"
         textColor="text.primary"
       >
-        <div>placholder</div>
+        <Box
+          sx={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Typography sx={{ marginBottom: '5rem' }} variant="h2">
+            Core Competencies
+          </Typography>
+          <Stack
+            gap={4}
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}
+          >
+            {FEATURES.map((feature) => (
+              <FeatureCard
+                icon={feature.icon}
+                title={feature.title}
+                content={feature.content}
+              />
+            ))}
+          </Stack>
+        </Box>
       </SolidBackground>
       <SolidBackground
         height="70vh"
@@ -120,14 +236,6 @@ const Page: NextPageWithLayout = () => {
           content={ABOUT_ME.content}
         />
       </SolidBackground>
-      <SolidBackground
-        height="70vh"
-        backgroundColor="primary.main"
-        textColor="white"
-      >
-        <HighlightedFeature imgSrc="/tim1.jpg" heading="test" content="test" />
-      </SolidBackground>
-
       <PictureBackground
         imgSrc="/code2.jpg"
         height="50vh"

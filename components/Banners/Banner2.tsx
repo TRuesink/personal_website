@@ -99,7 +99,7 @@ const Banner2 = ({ headline, features, imgSrc }: Banner2Props) => {
       <Box
         className={styles.BannerImageContainer}
         sx={{
-          height: { xs: '40vh', sm: '80vh' },
+          height: { xs: '45vh', sm: '90vh' },
           minWidth: { xs: '100%', sm: '70%', md: '50%' },
         }}
       >

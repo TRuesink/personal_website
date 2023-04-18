@@ -1,6 +1,5 @@
 .Background {
   position: relative;
-  overflow: hidden;
 }
 
 .Content {
@@ -8,4 +7,26 @@
   position: relative;
   z-index: 10;
   min-height: inherit;
+}
+
+.Design1Left::after {
+  content: "";
+  position: absolute;
+  background: radial-gradient(#b0bec5, transparent, transparent);
+  height: 150%;
+  width: 100%;
+  top: 0;
+  left: -50%;
+  z-index: 1;
+}
+
+.Design1Right::after {
+  content: "";
+  position: absolute;
+  background: radial-gradient(#ffccbc, transparent, transparent);
+  height: 150%;
+  width: 100%;
+  top: 0;
+  right: -50%;
+  z-index: 1;
 }

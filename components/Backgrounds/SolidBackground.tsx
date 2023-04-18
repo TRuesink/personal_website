@@ -1,5 +1,6 @@
 import { Box, Container, SvgIcon } from '@mui/material';
 import React from 'react';
+import { BACKGROUND_DESIGNS } from './backgroundDesigns';
 
 import styles from './Backgrounds.module.css';
 
@@ -17,8 +18,14 @@ export type SolidBackgroundProps = {
   backgroundOpacity?: number;
   textColor: string;
   children: React.ReactElement;
+  design?: string;
   shapes?: React.ReactElement[];
   overflow?: string;
+};
+
+const designMap = {
+  [BACKGROUND_DESIGNS.ONE_LEFT]: styles.Design1Left,
+  [BACKGROUND_DESIGNS.ONE_RIGHT]: styles.Design1Right,
 };
 
 const SolidBackground = ({
@@ -29,10 +36,11 @@ const SolidBackground = ({
   shapes,
   backgroundOpacity,
   overflow,
+  design,
 }: SolidBackgroundProps) => {
   return (
     <Box
-      className={styles.Background}
+      className={`${styles.Background} ${design ? designMap[design] : ''}`}
       sx={{
         minHeight: height,
         backgroundColor: backgroundColor,

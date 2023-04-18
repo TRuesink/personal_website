@@ -37,6 +37,7 @@ const Accordion = ({ width, items }: AccordionProps) => {
           borderRadius: 0,
           borderTop: index === 0 ? 'none' : 'solid 1px',
           borderColor: 'primary.light',
+          textTransform: 'none',
         }}
         onClick={() => handleClick(item.summary)}
       >

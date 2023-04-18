@@ -77,17 +77,21 @@ export const FEATURES = [
   },
 ];
 
-export const TESTIMONIALS = [
-  {
-    name: 'Ashley',
-    quote: '',
-    date: '11/14/22',
-    rating: 0,
-  },
-];
-
 export const ABOUT_ME = {
   heading: 'A few things about me',
   content:
     'Hi! I’m Anthony. I am a certified macro nutrition and fitness coach. I specialize in metabolism repair, fat loss, and body recomposition. Learn more about me on the “Meet the coach” page! ',
 };
+
+export const TIMELINE_ITEMS = [
+  {
+    title: 'WMU',
+    content: <div>DataChat</div>,
+    imgSrc: './wmu.svg',
+  },
+  {
+    title: 'UW-Madison',
+    content: <div>DataChat</div>,
+    imgSrc: './uw.svg',
+  },
+]
