@@ -22,6 +22,8 @@ import Logo from '../../public/brand1.png';
 import CustomMenuItem from '../Links/CustomMenuItem';
 
 import styles from './Header1.module.css';
+import Link from 'next/link';
+import CustomLink from '../Links/CustomLink';
 
 const Header1 = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -38,35 +40,41 @@ const Header1 = () => {
     <AppBar sx={{ backgroundColor: 'white' }} position="sticky">
       <Container>
         <Toolbar disableGutters>
-          <Box className={styles.Company}>
-            <Image
-              className={styles.Logo}
-              src={Logo}
-              height={50}
-              width={50}
-              alt="logo"
-            />
-            <Typography
-              color="primary"
-              className={styles.CompanyText + ' ' + COMPANY_NAME.FONT.className}
-              sx={{
-                display: { xs: 'flex', sm: 'none', lg: 'flex' },
-                fontSize: COMPANY_NAME.FONT_SIZE,
-              }}
-            >
-              {COMPANY_NAME.ACRONYM}
-            </Typography>
-            <Typography
-              color="primary"
-              className={styles.CompanyText + ' ' + COMPANY_NAME.FONT.className}
-              sx={{
-                display: { xs: 'none', sm: 'flex', lg: 'none' },
-                fontSize: COMPANY_NAME.FONT_SIZE,
-              }}
-            >
-              {COMPANY_NAME.FULL_NAME}
-            </Typography>
-          </Box>
+          <CustomLink href="/" textDecoration="none">
+            <Box className={styles.Company}>
+              <Image
+                className={styles.Logo}
+                src={Logo}
+                height={50}
+                width={50}
+                alt="logo"
+              />
+              <Typography
+                color="primary"
+                className={
+                  styles.CompanyText + ' ' + COMPANY_NAME.FONT.className
+                }
+                sx={{
+                  display: { xs: 'flex', sm: 'none', lg: 'flex' },
+                  fontSize: COMPANY_NAME.FONT_SIZE,
+                }}
+              >
+                {COMPANY_NAME.ACRONYM}
+              </Typography>
+              <Typography
+                color="primary"
+                className={
+                  styles.CompanyText + ' ' + COMPANY_NAME.FONT.className
+                }
+                sx={{
+                  display: { xs: 'none', sm: 'flex', lg: 'none' },
+                  fontSize: COMPANY_NAME.FONT_SIZE,
+                }}
+              >
+                {COMPANY_NAME.FULL_NAME}
+              </Typography>
+            </Box>
+          </CustomLink>
           <Box sx={{ display: { xs: 'none', lg: 'flex' } }}>
             {NAVIGATION_ITEMS.map((item) => (
               <Button
