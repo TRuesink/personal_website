@@ -37,163 +37,213 @@ const Page: NextPageWithLayout = () => {
       </SolidBackground>
       <SolidBackground
         height="100vh"
-        backgroundColor="white"
-        textColor="text.primary"
-        overflow="visible"
-        design={BACKGROUND_DESIGNS.ONE_LEFT}
-      >
-        <>
-          <Box
-            sx={{
-              position: 'absolute',
-              height: '20%',
-              top: '30%',
-              width: '100%',
-              right: '60%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-end',
-              justifyContent: 'center',
-              padding: '3rem',
-              backgroundColor: 'secondary.main',
-              borderRadius: '50px 50px',
-            }}
-          >
-            <Typography variant="h2" color="primary">
-              EXPERIENCE
-            </Typography>
-            <Box
-              sx={{
-                position: 'absolute',
-                width: '50%',
-                textAlign: 'right',
-                padding: '3rem',
-                top: '100%',
-              }}
-            >
-              <FormatQuote
-                sx={{
-                  fontSize: '5rem',
-                  position: 'absolute',
-                  top: '10px',
-                  left: '0',
-                  transform: 'scaleX(-1)',
-                  opacity: 0.2,
-                }}
-              />
-              <Typography variant="h4">
-                The most certain way to succeed is always to try just one more
-                time.
-              </Typography>
-              <Typography> - Thomas Edison</Typography>
-            </Box>
-          </Box>
-          <Stack
-            gap={2}
-            width="100%"
-            height="auto"
-            marginTop="3rem"
-            marginBottom="3rem"
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              justifyContent: { xs: 'flex-start', md: 'flex-end' },
-              alignItems: { xs: 'center', md: 'flex-start' },
-            }}
-          >
-            <Box
-              sx={{
-                height: '100%',
-                width: { xs: '100%', sm: '80%', md: '50%' },
-              }}
-            >
-              <Accordion width="100%" items={EXPERIENCE} />
-            </Box>
-          </Stack>
-        </>
-      </SolidBackground>
-      <SolidBackground
-        height="100vh"
-        backgroundColor="white"
+        backgroundColor="grey.100"
         textColor="text.primary"
         overflow="visible"
         design={BACKGROUND_DESIGNS.ONE_RIGHT}
       >
-        <>
+        <Stack
+          gap={2}
+          width="100%"
+          height="auto"
+          marginTop="3rem"
+          marginBottom="3rem"
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            justifyContent: { xs: 'flex-start', md: 'flex-end' },
+            alignItems: { xs: 'center', md: 'flex-start' },
+          }}
+        >
           <Box
             sx={{
-              position: 'absolute',
-              height: '20%',
-              top: '30%',
-              width: '100%',
-              left: '60%',
+              flexGrow: 1,
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
-              justifyContent: 'flex-start',
-              padding: '3rem',
-              backgroundColor: 'primary.light',
-              borderRadius: '50px',
+              justifyContent: 'center',
+              position: 'relative',
+              height: '100%',
+              gap: 2,
             }}
           >
-            <Typography variant="h2" color="white">
+            <Box
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+                position: 'relative',
+                height: 100,
+                width: '100%',
+                marginLeft: '-130%',
+                backgroundColor: 'secondary.dark',
+                borderRadius: '10px',
+              }}
+            />
+            <Typography
+              variant="h3"
+              color="primary"
+              sx={{
+                position: 'relative',
+                padding: '10px 20px',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  backgroundColor: 'secondary.light',
+                  borderRadius: '10px',
+                  top: 0,
+                  left: '-200%',
+                  bottom: 0,
+                  right: 0,
+                  zIndex: '-1',
+                },
+              }}
+            >
+              EXPERIENCE
+            </Typography>
+            <Box
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+                position: 'relative',
+                height: 50,
+                width: '100%',
+                marginLeft: '-150%',
+                backgroundColor: 'primary.light',
+                borderRadius: '10px',
+              }}
+            />
+            <Box
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+                position: 'relative',
+                height: 80,
+                width: '100%',
+                marginLeft: '-180%',
+                backgroundColor: 'transparent',
+                borderColor: 'secondary.dark',
+                borderWidth: '3px',
+                borderStyle: 'solid',
+                borderRadius: '10px',
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              flexShrink: 0,
+              height: '90%',
+              width: { xs: '100%', sm: '80%', md: '50%' },
+            }}
+          >
+            <Accordion width="100%" items={EXPERIENCE} />
+          </Box>
+        </Stack>
+      </SolidBackground>
+      <SolidBackground
+        height="100vh"
+        backgroundColor="grey.100"
+        textColor="text.primary"
+      >
+        <Stack
+          gap={2}
+          width="100%"
+          height="auto"
+          marginTop="3rem"
+          marginBottom="3rem"
+          sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column-reverse', md: 'row' },
+            justifyContent: { xs: 'flex-start', md: 'space-between' },
+            alignItems: { xs: 'center', md: 'flex-start' },
+          }}
+        >
+          <Box
+            sx={{
+              flexShrink: 0,
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'column',
+              height: '90%',
+              width: { xs: '100%', sm: '80%', md: '50%' },
+            }}
+          >
+            <CustomTimeline items={TIMELINE_ITEMS} />
+          </Box>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
+              height: '100%',
+              gap: 2,
+            }}
+          >
+            <Box
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+                position: 'relative',
+                height: 100,
+                width: '100%',
+                marginRight: '-130%',
+                backgroundColor: 'secondary.dark',
+                borderRadius: '10px',
+              }}
+            />
+            <Typography
+              variant="h3"
+              color="white"
+              sx={{
+                position: 'relative',
+                padding: '10px 20px',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  backgroundColor: 'primary.light',
+                  borderRadius: '10px',
+                  top: 0,
+                  right: '-200%',
+                  bottom: 0,
+                  left: 0,
+                  zIndex: '-1',
+                },
+              }}
+            >
               EDUCATION
             </Typography>
             <Box
               sx={{
-                position: 'absolute',
-                width: '50%',
-                textAlign: 'left',
-                padding: '3rem',
-                top: '100%',
+                display: { xs: 'none', md: 'flex' },
+                position: 'relative',
+                height: 50,
+                width: '100%',
+                marginRight: '-150%',
+                backgroundColor: 'secondary.light',
+                borderRadius: '10px',
               }}
-            >
-              <FormatQuote
-                sx={{
-                  fontSize: '5rem',
-                  position: 'absolute',
-                  top: '10px',
-                  left: '0',
-                  transform: 'scaleX(-1)',
-                  opacity: 0.2,
-                }}
-              />
-              <Typography variant="h4">
-                Education is what remains after one has forgotten what one has
-                learned in school.
-              </Typography>
-              <Typography> - Albert Einstein</Typography>
-            </Box>
-          </Box>
-          <Stack
-            gap={2}
-            width="100%"
-            height="auto"
-            marginTop="3rem"
-            marginBottom="3rem"
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              justifyContent: { xs: 'flex-start', md: 'space-between' },
-              alignItems: { xs: 'center', md: 'flex-start' },
-            }}
-          >
+            />
             <Box
               sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                height: '100%',
-                width: { xs: '100%', sm: '80%', md: '50%' },
+                display: { xs: 'none', md: 'flex' },
+                position: 'relative',
+                height: 80,
+                width: '100%',
+                marginRight: '-180%',
+                backgroundColor: 'transparent',
+                borderColor: 'primary.main',
+                borderWidth: '3px',
+                borderStyle: 'solid',
+                borderRadius: '10px',
               }}
-            >
-              <CustomTimeline items={TIMELINE_ITEMS} />
-            </Box>
-          </Stack>
-        </>
+            />
+          </Box>
+        </Stack>
       </SolidBackground>
       <SolidBackground
         height="70vh"
         backgroundColor="white"
         textColor="text.primary"
+        design={BACKGROUND_DESIGNS.ONE_LEFT}
+        overflow="visible"
       >
         <Box
           sx={{
@@ -202,18 +252,24 @@ const Page: NextPageWithLayout = () => {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+            paddingTop: '3rem',
+            paddingBottom: '3rem',
           }}
         >
-          <Typography sx={{ marginBottom: '5rem' }} variant="h2">
-            Core Competencies
+          <Typography
+            sx={{ marginBottom: '5rem', textAlign: 'center' }}
+            variant="h3"
+          >
+            CORE COMPETENCIES
           </Typography>
           <Stack
             gap={4}
             sx={{
               display: 'flex',
-              flexDirection: 'row',
+              flexDirection: { xs: 'column', md: 'row' },
               alignItems: 'center',
             }}
+            padding={4}
           >
             {FEATURES.map((feature) => (
               <FeatureCard
@@ -229,9 +285,10 @@ const Page: NextPageWithLayout = () => {
         height="70vh"
         backgroundColor="white"
         textColor="text.primary"
+        design={BACKGROUND_DESIGNS.ONE_RIGHT}
       >
         <HighlightedFeature
-          imgSrc="/tim4.png"
+          imgSrc="/tim2.jpg"
           heading={ABOUT_ME.heading}
           content={ABOUT_ME.content}
         />

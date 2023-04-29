@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 
@@ -31,7 +31,8 @@ const HighlightedFeature = ({
     >
       <Grid item xs={10} sm={5}>
         <Typography variant="h4">{heading}</Typography>
-        <Typography>{content}</Typography>
+        <Typography sx={{ margin: '0.5rem 0' }}>{content}</Typography>
+        <Button variant="contained">Read More</Button>
       </Grid>
       <Grid item xs={10} sm={4}>
         <Box

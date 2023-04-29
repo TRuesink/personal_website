@@ -9,7 +9,7 @@
   min-height: inherit;
 }
 
-.Design1Left::after {
+.Design1Left::before {
   content: "";
   position: absolute;
   background: radial-gradient(#b0bec5, transparent, transparent);
@@ -20,7 +20,7 @@
   z-index: 1;
 }
 
-.Design1Right::after {
+.Design1Right::before {
   content: "";
   position: absolute;
   background: radial-gradient(#ffccbc, transparent, transparent);

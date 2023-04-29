@@ -5,6 +5,7 @@ import {
   Groups,
   LinkedIn,
 } from '@mui/icons-material';
+import { Typography } from '@mui/material';
 import { Source_Sans_Pro } from '@next/font/google';
 const companyFont = Source_Sans_Pro({ weight: '400', subsets: ['latin'] });
 
@@ -86,12 +87,24 @@ export const ABOUT_ME = {
 export const TIMELINE_ITEMS = [
   {
     title: 'WMU',
-    content: <div>DataChat</div>,
+    content: (
+      <div>
+        <Typography>2012 - 2016</Typography>
+        <Typography>B.S. Mechanical Engineerg</Typography>
+        <Typography>summa cum laude</Typography>
+      </div>
+    ),
     imgSrc: './wmu.svg',
   },
   {
     title: 'UW-Madison',
-    content: <div>DataChat</div>,
+    content: (
+      <div>
+        <Typography>2017 - 2019</Typography>
+        <Typography>M.S. Mechanical Engineerg</Typography>
+        <Typography>GPA: 3.85 / 4.00</Typography>
+      </div>
+    ),
     imgSrc: './uw.svg',
   },
-]
+];

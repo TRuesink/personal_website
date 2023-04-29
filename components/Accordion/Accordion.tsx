@@ -35,7 +35,7 @@ const Accordion = ({ width, items }: AccordionProps) => {
           justifyContent: 'space-between',
           padding: '1rem 0.5rem',
           borderRadius: 0,
-          borderTop: index === 0 ? 'none' : 'solid 1px',
+          borderTop: 'solid 1px',
           borderColor: 'primary.light',
           textTransform: 'none',
         }}

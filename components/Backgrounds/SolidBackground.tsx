@@ -46,11 +46,14 @@ const SolidBackground = ({
         backgroundColor: backgroundColor,
         color: textColor,
         opacity: backgroundOpacity || 1,
+        overflowX: 'clip',
         overflowY: overflow || 'hidden',
       }}
     >
       {shapes?.map((shape) => shape)}
-      <Container className={styles.Content}>{children}</Container>
+      <Container maxWidth="xl" className={styles.Content}>
+        {children}
+      </Container>
     </Box>
   );
 };
