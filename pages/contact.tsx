@@ -12,7 +12,7 @@ const Page: NextPageWithLayout = () => {
         imgSrc="/contact_bg.svg"
         height="90vh"
         textColor="text.primary"
-        overlayColor="secondary.light"
+        overlayColor="grey.100"
         overlayOpacity={0.2}
       >
         <Stack
