@@ -18,17 +18,25 @@ const Page: NextPageWithLayout = () => {
         <Stack
           direction="row"
           alignItems="center"
-          justifyContent="space-around"
           width="100%"
+          sx={{
+            display: 'flex',
+            flexDirection: {
+              xs: 'column',
+              sm: 'row',
+            },
+            justifyContent: { xs: 'center', sm: 'space-around' },
+            gap: '2rem',
+            padding: '3rem',
+          }}
         >
           <Box
             sx={{
-              width: '45%',
-              height: '100%',
               display: 'flex',
               alignItems: 'flex-start',
               justifyContent: 'center',
               flexDirection: 'column',
+              flex: { xs: 'unset', sm: 1 },
             }}
           >
             <Typography variant="h2" color="primary.light">
@@ -43,11 +51,12 @@ const Page: NextPageWithLayout = () => {
           </Box>
           <Box
             sx={{
-              width: '45%',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               flexDirection: 'column',
+              flex: { xs: 'unset', sm: 1 },
+              minWidth: { xs: '80vw', sm: 'unset' },
             }}
           >
             <Paper sx={{ width: '100%', padding: '2rem' }}>
