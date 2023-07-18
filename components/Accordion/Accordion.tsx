@@ -79,7 +79,7 @@ const Accordion = ({ width, items }: AccordionProps) => {
         flexDirection: 'column',
       }}
     >
-      {items.map((item, index) => renderAccordionItem(item, index))}
+      {items.map((item) => renderAccordionItem(item))}
     </Box>
   );
 };
