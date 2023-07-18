@@ -13,6 +13,7 @@ export type PictureBackgroundProps = {
   children: React.ReactElement;
   overlayColor: string;
   overlayOpacity: number;
+  backgroundImageClass?: string;
 };
 
 const PictureBackground = ({
@@ -22,6 +23,7 @@ const PictureBackground = ({
   children,
   overlayColor,
   overlayOpacity,
+  backgroundImageClass,
 }: PictureBackgroundProps) => {
   return (
     <Box
@@ -38,7 +40,12 @@ const PictureBackground = ({
           minHeight: height,
         }}
       >
-        <Image className="BackgroundImage" fill src={imgSrc} alt="bg-image" />
+        <Image
+          className={backgroundImageClass || 'BackgroundImage'}
+          fill
+          src={imgSrc}
+          alt="bg-image"
+        />
       </Box>
       <Box
         sx={{
@@ -49,7 +56,11 @@ const PictureBackground = ({
           opacity: overlayOpacity,
         }}
       />
-      <Container className={styles.Content} sx={{ minHeight: 'inherit' }}>
+      <Container
+        maxWidth="xl"
+        className={styles.Content}
+        sx={{ minHeight: 'inherit' }}
+      >
         {children}
       </Container>
     </Box>

@@ -267,7 +267,7 @@ const Page: NextPageWithLayout = () => {
             sx={{
               display: 'flex',
               flexDirection: { xs: 'column', md: 'row' },
-              alignItems: 'center',
+              alignItems: { xs: 'center', md: 'flex-start' },
             }}
             padding={4}
           >
@@ -289,6 +289,7 @@ const Page: NextPageWithLayout = () => {
       >
         <HighlightedFeature
           imgSrc="/tim2.jpg"
+          href={PRIMARY_ACTION.href}
           heading={ABOUT_ME.heading}
           content={ABOUT_ME.content}
         />

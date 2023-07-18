@@ -25,6 +25,7 @@ export const theme = createTheme({
     fontFamily: mainFont.style.fontFamily,
     button: {
       fontSize: '1rem',
+      textTransform: 'none',
     },
   },
   components: {

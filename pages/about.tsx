@@ -4,6 +4,7 @@ import { PRIMARY_ACTION } from '../constants';
 import PictureBackground from '../components/Backgrounds/PictureBackground';
 import CallToAction from '../components/CallToAction/CallToAction';
 import type { NextPageWithLayout } from './_app';
+import { Box, Button, Typography } from '@mui/material';
 
 const Page: NextPageWithLayout = () => {
   return (
@@ -14,23 +15,34 @@ const Page: NextPageWithLayout = () => {
         textColor="white"
         overlayColor="primary.dark"
         overlayOpacity={0.8}
+        backgroundImageClass="BackgroundImageRightTop"
       >
-        <div>test</div>
-      </PictureBackground>
-
-      <PictureBackground
-        imgSrc="/code2.jpg"
-        height="50vh"
-        textColor="white"
-        overlayColor="primary.main"
-        overlayOpacity={0.8}
-      >
-        <CallToAction
-          title={PRIMARY_ACTION.label}
-          content={PRIMARY_ACTION.content}
-          buttonText={PRIMARY_ACTION.label}
-          buttonHref={PRIMARY_ACTION.href}
-        />
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            width: { xs: '100%', md: '50%' },
+          }}
+        >
+          <Typography variant="h1">About</Typography>
+          <Typography variant="h6">
+            Hi there! I'm a passionate <strong>software engineer</strong> who
+            thrives on the thrill of solving complex problems and creating
+            elegant solutions. When I'm not immersed in coding, you'll likely
+            find me out in nature, exploring breathtaking trails on my bike,
+            embarking on exciting backpacking adventures, or carving through
+            pristine snow on skis.
+          </Typography>
+          <br />
+          <Button
+            href={PRIMARY_ACTION.href}
+            variant="contained"
+            color="secondary"
+          >
+            {PRIMARY_ACTION.label}
+          </Button>
+        </Box>
       </PictureBackground>
     </div>
   );

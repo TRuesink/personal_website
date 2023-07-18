@@ -16,7 +16,7 @@ type AccordionProps = {
 };
 
 const Accordion = ({ width, items }: AccordionProps) => {
-  const [expanded, setExpanded] = useState<string | false>(false);
+  const [expanded, setExpanded] = useState<string | false>(items[0].summary);
 
   const handleClick = (name: string) => {
     if (name === expanded) {

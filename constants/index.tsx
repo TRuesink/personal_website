@@ -24,7 +24,7 @@ export const NAVIGATION_ITEMS = [
 export const PRIMARY_ACTION = {
   label: 'Contact Me',
   content:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie, risus eu tristique tempor, arcu dolor suscipit turpis, eget venenatisligula lorem vel tellus. Curabitur efficitur massa a condimentum interdum. Maecenas convallis imperdiet sapien sit amet pellentesque.',
+    'Need a software engineer to bring your ideas to life? Look no further! With my strong technical skills and experience in developing cutting-edge software solutions, Im ready to tackle any challenge. Lets collaborate and create something amazing together - reach out to me today!',
   href: '/contact',
 };
 
@@ -62,26 +62,26 @@ export const FEATURES = [
     icon: <Code />,
     title: 'Fullstack Engineering',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
+      'From the front-end to the back-end, I cover the full engineering stack! A few technologies I work with: HTML/CSS, Javascript, React, Next.js, Python, Flask, Golang, PostgreSQL, and more.',
   },
   {
     icon: <DesignServices />,
     title: 'Usability Design',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
+      'With meticulous attention to detail and a passion for creating intuitive interfaces, I craft designs that effortlessly guide users on a delightful journey, ensuring every interaction leaves a lasting impression.',
   },
   {
     icon: <Groups />,
-    title: 'Leadership',
+    title: 'Project Management',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien massa, sodales eu rhoncus sed, maximus ut nisl. Duis semper.',
+      'I orchestrate the seamless execution of complex projects, ensuring milestones are met on time. With a thorough approach and communication, I lead cross-functional teams to deliver software solutions that drive company growth.',
   },
 ];
 
 export const ABOUT_ME = {
   heading: 'A few things about me',
   content:
-    'Hi! I’m Anthony. I am a certified macro nutrition and fitness coach. I specialize in metabolism repair, fat loss, and body recomposition. Learn more about me on the “Meet the coach” page! ',
+    "When I'm not immersed in the world of software engineering, I find joy in pursuing my hobbies. I have a passion for road cycling and backpacking. Additionally, I enjoy staying active through hiking and discovering new trails, immersing myself in nature's beauty while recharging my creativity. Click more to learn more about me!",
 };
 
 export const TIMELINE_ITEMS = [
@@ -89,9 +89,11 @@ export const TIMELINE_ITEMS = [
     title: 'WMU',
     content: (
       <div>
-        <Typography>2012 - 2016</Typography>
-        <Typography>B.S. Mechanical Engineerg</Typography>
-        <Typography>summa cum laude</Typography>
+        <Typography fontSize="1.2rem" fontWeight="bold">
+          2012 - 2016
+        </Typography>
+        <Typography fontSize="1.2rem">B.S. Mechanical Engineerg</Typography>
+        <Typography fontSize="1.2rem">summa cum laude</Typography>
       </div>
     ),
     imgSrc: './wmu.svg',
@@ -100,9 +102,11 @@ export const TIMELINE_ITEMS = [
     title: 'UW-Madison',
     content: (
       <div>
-        <Typography>2017 - 2019</Typography>
-        <Typography>M.S. Mechanical Engineerg</Typography>
-        <Typography>GPA: 3.85 / 4.00</Typography>
+        <Typography fontSize="1.2rem" fontWeight="bold">
+          2017 - 2019
+        </Typography>
+        <Typography fontSize="1.2rem">M.S. Mechanical Engineerg</Typography>
+        <Typography fontSize="1.2rem">GPA: 3.85 / 4.00</Typography>
       </div>
     ),
     imgSrc: './uw.svg',

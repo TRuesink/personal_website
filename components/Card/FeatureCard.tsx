@@ -9,7 +9,7 @@ type FeatureCardType = {
 
 const FeatureCard = ({ icon, title, content }: FeatureCardType) => {
   return (
-    <Card sx={{ height: 'fit-content', minWidth: 275 }}>
+    <Card sx={{ height: 'fit-content', minWidth: 275, maxWidth: 400 }}>
       <CardContent>
         <SvgIcon sx={{ fontSize: '3rem', color: 'primary.light' }}>
           {icon}

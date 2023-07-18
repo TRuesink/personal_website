@@ -9,6 +9,7 @@ type HighlightedFeatureProps = {
   imgSrc: string;
   heading: string;
   content: string;
+  href: string;
 };
 
 const HighlightedFeature = ({
@@ -16,6 +17,7 @@ const HighlightedFeature = ({
   imgSrc,
   heading,
   content,
+  href,
 }: HighlightedFeatureProps) => {
   return (
     <Grid
@@ -32,7 +34,9 @@ const HighlightedFeature = ({
       <Grid item xs={10} sm={5}>
         <Typography variant="h4">{heading}</Typography>
         <Typography sx={{ margin: '0.5rem 0' }}>{content}</Typography>
-        <Button variant="contained">Read More</Button>
+        <Button href={href} variant="contained">
+          Contact
+        </Button>
       </Grid>
       <Grid item xs={10} sm={4}>
         <Box
