@@ -4,8 +4,6 @@ import React from 'react';
 
 import styles from './Backgrounds.module.css';
 
-import imaage from '../../public/code2.jpg';
-
 export type PictureBackgroundProps = {
   imgSrc: string;
   height: string;

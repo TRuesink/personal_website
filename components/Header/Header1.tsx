@@ -22,7 +22,6 @@ import Logo from '../../public/brand1.png';
 import CustomMenuItem from '../Links/CustomMenuItem';
 
 import styles from './Header1.module.css';
-import Link from 'next/link';
 import CustomLink from '../Links/CustomLink';
 
 const Header1 = () => {

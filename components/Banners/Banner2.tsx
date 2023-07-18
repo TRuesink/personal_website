@@ -10,7 +10,7 @@ import styles from './Banner.module.css';
 import Link from 'next/link';
 
 type Feature = {
-  icon: JSX.Element;
+  icon: React.ReactElement;
   title: string;
   content: string;
 };
@@ -54,7 +54,12 @@ const Banner2 = ({ headline, features, imgSrc }: Banner2Props) => {
             {headline}
           </Typography>
           {features.map((feature) => (
-            <Stack direction="row" gap={2} alignItems="center">
+            <Stack
+              key={`headline-feature-${feature.title}`}
+              direction="row"
+              gap={2}
+              alignItems="center"
+            >
               {feature.icon}
               <Typography variant="h6">{feature.title}</Typography>
             </Stack>
@@ -74,7 +79,12 @@ const Banner2 = ({ headline, features, imgSrc }: Banner2Props) => {
             {headline}
           </Typography>
           {features.map((feature) => (
-            <Stack direction="row" gap={2} alignItems="center">
+            <Stack
+              key={`headline-feature-${feature.title}`}
+              direction="row"
+              gap={2}
+              alignItems="center"
+            >
               <SvgIcon fontSize="large">{feature.icon}</SvgIcon>
               <Typography variant="h4">{feature.title}</Typography>
             </Stack>
@@ -90,7 +100,7 @@ const Banner2 = ({ headline, features, imgSrc }: Banner2Props) => {
             {PRIMARY_ACTION.label}
           </Button>
           {SOCIAL_LINKS.map((link) => (
-            <Link href={link.href}>
+            <Link href={link.href} key={`banner-social-links-${link.href}`}>
               <IconButton color="secondary">{link.icon}</IconButton>
             </Link>
           ))}

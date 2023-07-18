@@ -29,6 +29,7 @@ const ContactForm = () => {
         await axios.post('/api/form', values);
         setShowForm(false);
         resetForm();
+        // eslint-disable-next-line no-empty
       } catch (error) {}
     },
   });

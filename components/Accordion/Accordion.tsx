@@ -26,7 +26,7 @@ const Accordion = ({ width, items }: AccordionProps) => {
     }
   };
 
-  const renderAccordionItem = (item: AccordionItem, index: number) => (
+  const renderAccordionItem = (item: AccordionItem) => (
     <>
       <Button
         color="primary"

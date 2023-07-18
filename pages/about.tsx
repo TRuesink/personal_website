@@ -2,7 +2,6 @@ import type { ReactElement } from 'react';
 import Layout1 from '../components/Layout/Layout1';
 import { PRIMARY_ACTION } from '../constants';
 import PictureBackground from '../components/Backgrounds/PictureBackground';
-import CallToAction from '../components/CallToAction/CallToAction';
 import type { NextPageWithLayout } from './_app';
 import { Box, Button, Typography } from '@mui/material';
 
@@ -27,12 +26,12 @@ const Page: NextPageWithLayout = () => {
         >
           <Typography variant="h1">About</Typography>
           <Typography variant="h6">
-            Hi there! I'm a passionate <strong>software engineer</strong> who
-            thrives on the thrill of solving complex problems and creating
-            elegant solutions. When I'm not immersed in coding, you'll likely
-            find me out in nature, exploring breathtaking trails on my bike,
-            embarking on exciting backpacking adventures, or carving through
-            pristine snow on skis.
+            Hi there! I&apos;m a passionate <strong>software engineer</strong>{' '}
+            who thrives on the thrill of solving complex problems and creating
+            elegant solutions. When I&apos;m not immersed in coding, you&apos;ll
+            likely find me out in nature, exploring breathtaking trails on my
+            bike, embarking on exciting backpacking adventures, or carving
+            through pristine snow on skis.
           </Typography>
           <br />
           <Button

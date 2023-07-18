@@ -1,4 +1,4 @@
-import { Box, Container, SvgIcon } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import React from 'react';
 import { BACKGROUND_DESIGNS } from './backgroundDesigns';
 

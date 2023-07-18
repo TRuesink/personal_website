@@ -13,12 +13,11 @@ import CallToAction from '../components/CallToAction/CallToAction';
 import type { NextPageWithLayout } from './_app';
 import HighlightedFeature from '../components/Features/HighlightedFeature';
 import Banner2 from '../components/Banners/Banner2';
-import { Box, Card, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import Accordion from '../components/Accordion/Accordion';
 import CustomTimeline from '../components/Timeline/Timeline';
 import { EXPERIENCE } from '../constants/experience';
 import { BACKGROUND_DESIGNS } from '../components/Backgrounds/backgroundDesigns';
-import { FormatQuote } from '@mui/icons-material';
 import FeatureCard from '../components/Card/FeatureCard';
 
 const Page: NextPageWithLayout = () => {
@@ -273,6 +272,7 @@ const Page: NextPageWithLayout = () => {
           >
             {FEATURES.map((feature) => (
               <FeatureCard
+                key={`feature-${feature.title}`}
                 icon={feature.icon}
                 title={feature.title}
                 content={feature.content}

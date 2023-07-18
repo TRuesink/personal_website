@@ -25,7 +25,10 @@ const CustomTimeline = ({ items }: CustomTimelineProps) => {
   return (
     <Timeline position="right">
       {items.map((item) => (
-        <TimelineItem sx={{ flexGrow: 1, '::before': { content: 'unset' } }}>
+        <TimelineItem
+          sx={{ flexGrow: 1, '::before': { content: 'unset' } }}
+          key={`timeline-item-${item.title}`}
+        >
           <TimelineSeparator>
             <TimelineConnector />
             <TimelineDot>
