@@ -27,7 +27,7 @@ const Accordion = ({ width, items }: AccordionProps) => {
   };
 
   const renderAccordionItem = (item: AccordionItem) => (
-    <>
+    <React.Fragment key={`accordion-item-${item.summary}`}>
       <Button
         color="primary"
         sx={{
@@ -67,7 +67,7 @@ const Accordion = ({ width, items }: AccordionProps) => {
           {item.content}
         </Box>
       </Box>
-    </>
+    </React.Fragment>
   );
 
   return (
