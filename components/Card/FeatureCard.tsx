@@ -5,15 +5,11 @@ type FeatureCardType = {
   icon: React.ReactElement;
   title: string;
   content: string;
-  key: string;
 };
 
-const FeatureCard = ({ icon, title, content, key }: FeatureCardType) => {
+const FeatureCard = ({ icon, title, content }: FeatureCardType) => {
   return (
-    <Card
-      sx={{ height: 'fit-content', minWidth: 275, maxWidth: 400 }}
-      key={key}
-    >
+    <Card sx={{ height: 'fit-content', minWidth: 275, maxWidth: 400 }}>
       <CardContent>
         <SvgIcon sx={{ fontSize: '3rem', color: 'primary.light' }}>
           {icon}

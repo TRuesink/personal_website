@@ -3,7 +3,7 @@
 }
 
 .Content {
-  display: flex;
+  display: flex !important;
   position: relative;
   z-index: 10;
   min-height: inherit;
