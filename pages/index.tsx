@@ -39,7 +39,7 @@ const Page: NextPageWithLayout = () => {
         backgroundColor="grey.100"
         textColor="text.primary"
         overflow="visible"
-        design={BACKGROUND_DESIGNS.ONE_RIGHT}
+        // design={BACKGROUND_DESIGNS.ONE_RIGHT}
       >
         <Stack
           gap={2}

@@ -15,7 +15,6 @@ import {
   COMPANY_NAME,
   NAVIGATION_ITEMS,
   PRIMARY_ACTION,
-  SECONDARY_ACTION,
 } from '../../constants';
 
 import Logo from '../../public/brand1.png';
@@ -108,17 +107,15 @@ const Header1 = () => {
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
           >
-            {NAVIGATION_ITEMS.concat([SECONDARY_ACTION, PRIMARY_ACTION]).map(
-              (item) => (
-                <CustomMenuItem
-                  key={item.label}
-                  onClick={handleCloseNavMenu}
-                  href={item.href}
-                >
-                  <Typography textAlign="center">{item.label}</Typography>
-                </CustomMenuItem>
-              )
-            )}
+            {NAVIGATION_ITEMS.concat([PRIMARY_ACTION]).map((item) => (
+              <CustomMenuItem
+                key={item.label}
+                onClick={handleCloseNavMenu}
+                href={item.href}
+              >
+                <Typography textAlign="center">{item.label}</Typography>
+              </CustomMenuItem>
+            ))}
           </Menu>
           <Box sx={{ display: { xs: 'none', lg: 'flex' } }}>
             <Button
