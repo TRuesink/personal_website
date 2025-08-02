@@ -1,0 +1,13 @@
+const BlogPage = () => {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Blog</h1>
+      <p className="text-gray-700 mb-4">
+        Welcome to my blog! Here youll find articles on various topics.
+      </p>
+      {/* Add your blog posts here */}
+    </div>
+  );
+};
+
+export default BlogPage;
