@@ -52,44 +52,7 @@ const rootPage = () => {
           </div>
         </div>
       </div>
-      {/* <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage: "url('/bg_hero_1.jpg')",
-        }}
-      >
-        <div className="hero-overlay"></div>
-        <div className="hero-content text-neutral-content text-center">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-            <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button className="btn btn-primary">Get Started</button>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row-reverse w-full">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-            className="w-full md:w-1/2 rounded-lg shadow-2xl"
-          />
-          <div className="md:w-1/2 w-full">
-            <h1 className="text-5xl font-bold">This Site</h1>
-            <p className="py-6">
-              I wanted a place that reflects more than just job titles and
-              bullet points (although I'll cover that too). This site is a bit
-              more human — I'll talk about my interests, non-professional
-              challenges that had an outsized impact on my professional life,
-              quotes that influence my decisions, general philosophies on life
-              and work, and more.
-            </p>
-          </div>
-        </div>
-      </div> */}
+
       <div className="hero bg-base-100 min-h-screen">
         <div className="hero-content flex-col-reverse lg:flex-row-reverse w-full">
           <ul className="timeline timeline-vertical md:w-1/2 w-full">
