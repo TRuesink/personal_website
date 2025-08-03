@@ -149,7 +149,7 @@ const rootPage = () => {
               sales. I loved working with people and the rush of closing deals,
               but sales activity went to ~0 during the pandemic. Still, I was
               able to add value by owning our Salesforce instance - my first
-              taste of software engineering. I've been hooked ever since.
+              taste of software engineering. I&apos;ve been hooked ever since.
             </p>
             <button className="btn btn-primary">Get Started</button>
           </div>
