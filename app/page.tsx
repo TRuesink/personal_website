@@ -48,7 +48,7 @@ const rootPage = () => {
                 work.
               </span>
             </div>
-            <button className="btn btn-primary">Learn more</button>
+            <button className="btn btn-primary">Learn More</button>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ const rootPage = () => {
             </li>
             <li>
               <hr className="bg-primary" />
-              <div className="timeline-start">2019</div>
+              <div className="timeline-start">2019 - 2021</div>
               <div className="timeline-middle">
                 <CheckCircleIcon
                   size={20}
@@ -144,14 +144,15 @@ const rootPage = () => {
           <div className="md:w-1/2 w-full">
             <h1 className="text-5xl font-bold">The Journey</h1>
             <p className="py-6">
-              Its been a circuitous path to software. I was formally trained in
-              mechanical engineering, but kicked off my career in technical
-              sales. I loved working with people and the rush of closing deals,
-              but sales activity went to ~0 during the pandemic. Still, I was
-              able to add value by owning our Salesforce instance - my first
-              taste of software engineering. I&apos;ve been hooked ever since.
+              I&apos;ve taken a circuitous path to software. I was formally
+              trained in mechanical engineering where I specialized in
+              cardiovascular fluid dynamics (dynamics of blood flow). I kicked
+              off my career in technical sales at a custom packaging company.
+              Since then, I&apos;ve been a key contributor at three early stage
+              startups - most recently as a Founding Software Engineer at
+              Offstream.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn btn-primary">Learn More</button>
           </div>
         </div>
       </div>
